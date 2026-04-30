@@ -28,7 +28,7 @@ export default function Hero() {
           {/* Headline */}
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#09090b] leading-[1.05] mb-6">
             Build Smarter.{' '}
-            <span className="italic font-light">Ship Faster.</span>
+            Ship Faster.
             <br />
             Operate Intelligently.
           </h1>
