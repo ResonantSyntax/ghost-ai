@@ -24,7 +24,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <GhostSVG size={36} />
-              <span style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '11px', lineHeight: '1.5', color: '#1c1c1c' }}>
+              <span style={{ fontFamily: "'Ubuntu Mono', monospace", fontSize: '11px', lineHeight: '1.5', color: '#1c1c1c' }}>
                 GHOST<br />AI
               </span>
             </div>
