@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import GhostSVG from './GhostSVG'
 
 const links = [
   { label: 'Services', href: '#services' },
@@ -28,11 +27,8 @@ export default function Nav() {
       }}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-3 no-underline">
-          <GhostLogo />
-          <span style={{ fontFamily: "'Ubuntu Mono', monospace", fontSize: '13px', lineHeight: '1.4', color: '#1c1c1c' }}>
-            GHOST<br />AI
-          </span>
+        <a href="#" className="no-underline">
+          <img src="/logo.png" alt="Ghost AI" className="h-10 w-auto" />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -104,8 +100,4 @@ export default function Nav() {
       )}
     </header>
   )
-}
-
-function GhostLogo() {
-  return <GhostSVG size={40} />
 }
