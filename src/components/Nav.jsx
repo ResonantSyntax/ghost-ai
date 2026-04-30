@@ -28,7 +28,7 @@ export default function Nav() {
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="no-underline">
-          <img src="/logo.png" alt="Ghost AI" className="h-10 w-auto" />
+          <img src="/logo.png" alt="Ghost AI" className="h-14 w-auto" />
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

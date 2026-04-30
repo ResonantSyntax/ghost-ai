@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-12 mb-16">
           <div>
             <div className="mb-4">
-              <img src="/logo.png" alt="Ghost AI" className="h-10 w-auto" />
+              <img src="/logo.png" alt="Ghost AI" className="h-14 w-auto" />
             </div>
             <p className="text-sm text-[#71717a] leading-relaxed max-w-xs mb-6">
               AI Software Development Consultancy. We build AI systems that transform how your business operates.
