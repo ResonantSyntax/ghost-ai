@@ -1,3 +1,5 @@
+import GhostSVG from './GhostSVG'
+
 const footerLinks = {
   Services: [
     'AI System Integration',
@@ -20,9 +22,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-12 mb-16">
           <div>
-            <div className="flex items-center gap-2.5 mb-4">
-              <GhostLogoSmall />
-              <span className="text-[#09090b] font-semibold text-lg tracking-tight">Ghost AI</span>
+            <div className="flex items-center gap-3 mb-4">
+              <GhostSVG size={36} />
+              <span style={{ fontFamily: "'Press Start 2P', monospace", fontSize: '11px', lineHeight: '1.5', color: '#1c1c1c' }}>
+                GHOST<br />AI
+              </span>
             </div>
             <p className="text-sm text-[#71717a] leading-relaxed max-w-xs mb-6">
               AI Software Development Consultancy. We build AI systems that transform how your business operates.
@@ -71,12 +75,3 @@ export default function Footer() {
   )
 }
 
-function GhostLogoSmall() {
-  return (
-    <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M14 3C9.029 3 5 7.029 5 12v10l3-2.5 3 2.5 3-2.5 3 2.5 3-2.5V12C23 7.029 18.971 3 14 3z" fill="#09090b" />
-      <circle cx="10.5" cy="12" r="1.5" fill="white" />
-      <circle cx="17.5" cy="12" r="1.5" fill="white" />
-    </svg>
-  )
-}
