@@ -21,54 +21,48 @@ export default function Nav() {
     <header
       className="fixed top-0 inset-x-0 z-50 transition-all duration-300"
       style={{
-        background: scrolled
-          ? 'rgba(8,8,10,0.85)'
-          : 'transparent',
+        background: scrolled ? 'rgba(255,255,255,0.92)' : 'transparent',
         backdropFilter: scrolled ? 'blur(20px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(39,39,42,0.8)' : '1px solid transparent',
+        borderBottom: scrolled ? '1px solid #e4e4e7' : '1px solid transparent',
       }}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
         <a href="#" className="flex items-center gap-2.5 no-underline">
           <GhostLogo />
-          <span className="text-[#fafafa] font-semibold text-lg tracking-tight">
-            Ghost <span className="text-[#a855f7]">AI</span>
+          <span className="text-[#09090b] font-semibold text-lg tracking-tight">
+            Ghost AI
           </span>
         </a>
 
-        {/* Desktop links */}
         <nav className="hidden md:flex items-center gap-8">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-[#a1a1aa] hover:text-[#fafafa] transition-colors duration-150 no-underline"
+              className="text-sm text-[#71717a] hover:text-[#09090b] transition-colors duration-150 no-underline"
             >
               {l.label}
             </a>
           ))}
         </nav>
 
-        {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
           <a
             href="#contact"
-            className="text-sm font-medium px-4 py-2 rounded-lg border border-[#27272a] text-[#a1a1aa] hover:text-[#fafafa] hover:border-[#3f3f46] transition-all duration-150 no-underline"
+            className="text-sm font-medium px-4 py-2 rounded-lg border border-[#e4e4e7] text-[#71717a] hover:text-[#09090b] hover:border-[#09090b] transition-all duration-150 no-underline"
           >
             Contact
           </a>
           <a
             href="#contact"
-            className="text-sm font-medium px-4 py-2 rounded-lg bg-[#a855f7] hover:bg-[#9333ea] text-white transition-colors duration-150 no-underline"
+            className="text-sm font-medium px-4 py-2 rounded-lg bg-[#09090b] hover:bg-[#3f3f46] text-white transition-colors duration-150 no-underline"
           >
             Start a Project
           </a>
         </div>
 
-        {/* Mobile menu button */}
         <button
-          className="md:hidden p-2 rounded-lg text-[#a1a1aa] hover:text-[#fafafa] hover:bg-[#18181b] transition-colors"
+          className="md:hidden p-2 rounded-lg text-[#71717a] hover:text-[#09090b] hover:bg-[#f4f4f5] transition-colors"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -84,16 +78,15 @@ export default function Nav() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden border-t border-[#27272a] bg-[#08080a]/95 backdrop-blur-xl">
+        <div className="md:hidden border-t border-[#e4e4e7] bg-white">
           <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-4">
             {links.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-sm text-[#a1a1aa] hover:text-[#fafafa] transition-colors no-underline py-1"
+                className="text-sm text-[#71717a] hover:text-[#09090b] transition-colors no-underline py-1"
               >
                 {l.label}
               </a>
@@ -101,7 +94,7 @@ export default function Nav() {
             <a
               href="#contact"
               onClick={() => setMenuOpen(false)}
-              className="mt-2 text-sm font-medium px-4 py-2.5 rounded-lg bg-[#a855f7] hover:bg-[#9333ea] text-white transition-colors text-center no-underline"
+              className="mt-2 text-sm font-medium px-4 py-2.5 rounded-lg bg-[#09090b] hover:bg-[#3f3f46] text-white transition-colors text-center no-underline"
             >
               Start a Project
             </a>
@@ -115,18 +108,12 @@ export default function Nav() {
 function GhostLogo() {
   return (
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="ghost-grad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#a855f7" />
-          <stop offset="100%" stopColor="#7c3aed" />
-        </linearGradient>
-      </defs>
       <path
         d="M14 3C9.029 3 5 7.029 5 12v10l3-2.5 3 2.5 3-2.5 3 2.5 3-2.5V12C23 7.029 18.971 3 14 3z"
-        fill="url(#ghost-grad)"
+        fill="#09090b"
       />
-      <circle cx="10.5" cy="12" r="1.5" fill="white" fillOpacity="0.9" />
-      <circle cx="17.5" cy="12" r="1.5" fill="white" fillOpacity="0.9" />
+      <circle cx="10.5" cy="12" r="1.5" fill="white" />
+      <circle cx="17.5" cy="12" r="1.5" fill="white" />
     </svg>
   )
 }

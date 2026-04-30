@@ -10,26 +10,13 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 md:py-32 relative">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#27272a] to-transparent" />
-
-      {/* Background glow */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse 60% 50% at 50% 100%, rgba(124,58,237,0.08) 0%, transparent 70%)',
-        }}
-      />
-
-      <div className="relative max-w-7xl mx-auto px-6">
-        {/* Header */}
+    <section id="contact" className="py-24 md:py-32 border-t border-[#e4e4e7]">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#27272a] bg-[#111113] mb-6">
-            <span className="text-xs font-medium text-[#71717a] tracking-wide uppercase">
-              Get in Touch
-            </span>
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#e4e4e7] bg-[#f4f4f5] mb-6">
+            <span className="text-xs font-medium text-[#3f3f46] tracking-wide uppercase">Get in Touch</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#fafafa] mb-4 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#09090b] mb-4 leading-tight">
             Ready to Build Something Intelligent?
           </h2>
           <p className="text-[#71717a] text-lg leading-relaxed">
@@ -38,10 +25,10 @@ export default function Contact() {
         </div>
 
         <div className="grid lg:grid-cols-[1fr_1.5fr] gap-12 lg:gap-20 max-w-5xl mx-auto">
-          {/* Left — contact info */}
+          {/* Left */}
           <div className="flex flex-col gap-8">
             <div>
-              <h3 className="text-[#fafafa] font-semibold text-lg mb-3">Let's talk</h3>
+              <h3 className="text-[#09090b] font-semibold text-lg mb-3">Let's talk</h3>
               <p className="text-[#71717a] text-sm leading-relaxed">
                 Whether you have a clear spec or just a problem you're trying to solve — we'd love to hear from you. No sales scripts, just a real conversation about what you need.
               </p>
@@ -82,11 +69,10 @@ export default function Contact() {
               />
             </div>
 
-            {/* Response time note */}
-            <div className="rounded-xl border border-[#27272a] bg-[#111113] p-4">
+            <div className="rounded-xl border border-[#e4e4e7] bg-[#fafafa] p-4">
               <div className="flex items-center gap-2 mb-1">
-                <span className="w-2 h-2 rounded-full bg-[#34d399]" />
-                <span className="text-sm font-medium text-[#fafafa]">Typically responds within 24 hours</span>
+                <span className="w-2 h-2 rounded-full bg-[#09090b]" />
+                <span className="text-sm font-medium text-[#09090b]">Typically responds within 24 hours</span>
               </div>
               <p className="text-xs text-[#71717a]">We're based in the UK and cover GMT timezone.</p>
             </div>
@@ -95,13 +81,13 @@ export default function Contact() {
           {/* Right — form */}
           <div>
             {submitted ? (
-              <div className="rounded-2xl border border-[#27272a] bg-[#111113] p-10 flex flex-col items-center justify-center text-center gap-4 min-h-[360px]">
-                <div className="w-16 h-16 rounded-full bg-[#a855f7]/15 border border-[#a855f7]/30 flex items-center justify-center">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a855f7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <div className="rounded-2xl border border-[#e4e4e7] bg-[#fafafa] p-10 flex flex-col items-center justify-center text-center gap-4 min-h-[360px]">
+                <div className="w-16 h-16 rounded-full bg-[#f4f4f5] border border-[#e4e4e7] flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#09090b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-[#fafafa]">Message Sent!</h3>
+                <h3 className="text-xl font-semibold text-[#09090b]">Message Sent!</h3>
                 <p className="text-[#71717a] text-sm max-w-xs">
                   Thanks for reaching out. We'll be in touch within one business day.
                 </p>
@@ -109,36 +95,17 @@ export default function Contact() {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="rounded-2xl border border-[#27272a] bg-[#111113] p-6 md:p-8 flex flex-col gap-5"
+                className="rounded-2xl border border-[#e4e4e7] bg-white p-6 md:p-8 flex flex-col gap-5"
+                style={{ boxShadow: '0 1px 8px rgba(0,0,0,0.04)' }}
               >
                 <div className="grid sm:grid-cols-2 gap-5">
-                  <FormField
-                    label="Name"
-                    type="text"
-                    placeholder="Your name"
-                    value={form.name}
-                    onChange={(v) => setForm({ ...form, name: v })}
-                    required
-                  />
-                  <FormField
-                    label="Email"
-                    type="email"
-                    placeholder="you@company.com"
-                    value={form.email}
-                    onChange={(v) => setForm({ ...form, email: v })}
-                    required
-                  />
+                  <FormField label="Name" type="text" placeholder="Your name" value={form.name} onChange={(v) => setForm({ ...form, name: v })} required />
+                  <FormField label="Email" type="email" placeholder="you@company.com" value={form.email} onChange={(v) => setForm({ ...form, email: v })} required />
                 </div>
-                <FormField
-                  label="Company"
-                  type="text"
-                  placeholder="Your company name"
-                  value={form.company}
-                  onChange={(v) => setForm({ ...form, company: v })}
-                />
+                <FormField label="Company" type="text" placeholder="Your company name" value={form.company} onChange={(v) => setForm({ ...form, company: v })} />
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-medium text-[#a1a1aa] uppercase tracking-wider">
-                    Message <span className="text-[#a855f7]">*</span>
+                  <label className="text-xs font-medium text-[#71717a] uppercase tracking-wider">
+                    Message <span className="text-[#09090b]">*</span>
                   </label>
                   <textarea
                     placeholder="Tell us about your project..."
@@ -146,17 +113,17 @@ export default function Contact() {
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 rounded-xl border border-[#27272a] bg-[#18181b] text-[#fafafa] text-sm placeholder-[#3f3f46] outline-none resize-none transition-colors duration-150 focus:border-[#a855f7]/50 focus:bg-[#1a1a1e]"
+                    className="w-full px-4 py-3 rounded-xl border border-[#e4e4e7] bg-[#fafafa] text-[#09090b] text-sm placeholder-[#d4d4d8] outline-none resize-none transition-colors duration-150 focus:border-[#09090b] focus:bg-white"
                     style={{ fontFamily: 'inherit' }}
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full py-3.5 rounded-xl bg-[#a855f7] hover:bg-[#9333ea] text-white font-semibold text-sm transition-colors duration-150 shadow-lg shadow-purple-900/25"
+                  className="w-full py-3.5 rounded-xl bg-[#09090b] hover:bg-[#3f3f46] text-white font-semibold text-sm transition-colors duration-150"
                 >
                   Send Message
                 </button>
-                <p className="text-center text-xs text-[#52525b]">
+                <p className="text-center text-xs text-[#a1a1aa]">
                   By submitting, you agree to be contacted about your enquiry. No spam, ever.
                 </p>
               </form>
@@ -171,8 +138,8 @@ export default function Contact() {
 function FormField({ label, type, placeholder, value, onChange, required }) {
   return (
     <div className="flex flex-col gap-1.5">
-      <label className="text-xs font-medium text-[#a1a1aa] uppercase tracking-wider">
-        {label} {required && <span className="text-[#a855f7]">*</span>}
+      <label className="text-xs font-medium text-[#71717a] uppercase tracking-wider">
+        {label} {required && <span className="text-[#09090b]">*</span>}
       </label>
       <input
         type={type}
@@ -180,7 +147,7 @@ function FormField({ label, type, placeholder, value, onChange, required }) {
         value={value}
         onChange={(e) => onChange(e.target.value)}
         required={required}
-        className="w-full px-4 py-3 rounded-xl border border-[#27272a] bg-[#18181b] text-[#fafafa] text-sm placeholder-[#3f3f46] outline-none transition-colors duration-150 focus:border-[#a855f7]/50 focus:bg-[#1a1a1e]"
+        className="w-full px-4 py-3 rounded-xl border border-[#e4e4e7] bg-[#fafafa] text-[#09090b] text-sm placeholder-[#d4d4d8] outline-none transition-colors duration-150 focus:border-[#09090b] focus:bg-white"
       />
     </div>
   )
@@ -192,9 +159,9 @@ function ContactLink({ icon, label, href, external }) {
       href={href}
       target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer' : undefined}
-      className="flex items-center gap-3 text-sm text-[#a1a1aa] hover:text-[#a855f7] transition-colors no-underline group"
+      className="flex items-center gap-3 text-sm text-[#71717a] hover:text-[#09090b] transition-colors no-underline group"
     >
-      <span className="flex-shrink-0 w-8 h-8 rounded-lg border border-[#27272a] bg-[#18181b] flex items-center justify-center text-[#71717a] group-hover:border-[#a855f7]/40 group-hover:text-[#a855f7] transition-all duration-150">
+      <span className="flex-shrink-0 w-8 h-8 rounded-lg border border-[#e4e4e7] bg-[#f4f4f5] flex items-center justify-center text-[#71717a] group-hover:border-[#09090b] group-hover:text-[#09090b] transition-all duration-150">
         {icon}
       </span>
       {label}

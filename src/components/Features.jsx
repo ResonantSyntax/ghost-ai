@@ -6,20 +6,17 @@ const services = [
       </svg>
     ),
     title: 'AI-Driven System Integration',
-    description:
-      'Use AI to unify fragmented systems — enabling intelligent data flow, automation, and decision-making across platforms.',
+    description: 'Use AI to unify fragmented systems — enabling intelligent data flow, automation, and decision-making across platforms.',
   },
   {
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="3" width="20" height="14" rx="2" />
-        <path d="m8 21 4-4 4 4M12 17v4" />
-        <path d="M7 10h10M7 7h4" />
+        <path d="m8 21 4-4 4 4M12 17v4M7 10h10M7 7h4" />
       </svg>
     ),
     title: 'AI-Powered Business Platforms',
-    description:
-      'Design platforms where AI sits at the core — orchestrating workflows, interpreting data, and driving operations.',
+    description: 'Design platforms where AI sits at the core — orchestrating workflows, interpreting data, and driving operations.',
   },
   {
     icon: (
@@ -29,31 +26,25 @@ const services = [
       </svg>
     ),
     title: 'AI Operational Agents',
-    description:
-      'Deploy AI agents that execute real business tasks — handling workflows, decisions, and system interactions end-to-end.',
+    description: 'Deploy AI agents that execute real business tasks — handling workflows, decisions, and system interactions end-to-end.',
   },
   {
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 3v18h18" />
-        <path d="m19 9-5 5-4-4-3 3" />
+        <path d="M3 3v18h18M19 9l-5 5-4-4-3 3" />
       </svg>
     ),
     title: 'AI Data Intelligence Systems',
-    description:
-      'Turn raw business data into AI-driven insights, reporting, and automated commentary that supports decision-making.',
+    description: 'Turn raw business data into AI-driven insights, reporting, and automated commentary that supports decision-making.',
   },
   {
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4 4h16v16H4z" />
-        <path d="m8 12 3 3 5-5" />
-        <path d="M12 2v2M12 20v2M2 12h2M20 12h2" />
+        <path d="M4 4h16v16H4zM8 12l3 3 5-5M12 2v2M12 20v2M2 12h2M20 12h2" />
       </svg>
     ),
     title: 'AI Workflow Automation',
-    description:
-      'Replace manual processes with AI-driven workflows that adapt, respond, and execute across systems in real time.',
+    description: 'Replace manual processes with AI-driven workflows that adapt, respond, and execute across systems in real time.',
   },
   {
     icon: (
@@ -64,8 +55,7 @@ const services = [
       </svg>
     ),
     title: 'AI-Integrated ERP & CRM Systems',
-    description:
-      'Embed AI into existing systems to automate processes, enrich data, and enable smarter operations without full rebuilds.',
+    description: 'Embed AI into existing systems to automate processes, enrich data, and enable smarter operations without full rebuilds.',
   },
   {
     icon: (
@@ -75,8 +65,7 @@ const services = [
       </svg>
     ),
     title: 'AI-Led Legacy System Transformation',
-    description:
-      'Introduce AI layers on top of legacy systems to modernise operations without disrupting core infrastructure.',
+    description: 'Introduce AI layers on top of legacy systems to modernise operations without disrupting core infrastructure.',
   },
   {
     icon: (
@@ -86,8 +75,7 @@ const services = [
       </svg>
     ),
     title: 'AI Event-Driven Architectures',
-    description:
-      'Build systems where AI responds to real-time events — calls, messages, transactions — and coordinates actions across services.',
+    description: 'Build systems where AI responds to real-time events — calls, messages, transactions — and coordinates actions across services.',
   },
   {
     icon: (
@@ -96,8 +84,7 @@ const services = [
       </svg>
     ),
     title: 'AI Observability & System Intelligence',
-    description:
-      'Implement AI-assisted monitoring, tracing, and analysis to understand system behaviour and improve performance over time.',
+    description: 'Implement AI-assisted monitoring, tracing, and analysis to understand system behaviour and improve performance over time.',
   },
   {
     icon: (
@@ -107,8 +94,7 @@ const services = [
       </svg>
     ),
     title: 'AI Voice & Conversational Systems',
-    description:
-      'Design and integrate AI voice and messaging agents that handle real customer interactions and business workflows.',
+    description: 'Design and integrate AI voice and messaging agents that handle real customer interactions and business workflows.',
   },
   {
     icon: (
@@ -117,26 +103,19 @@ const services = [
       </svg>
     ),
     title: 'AI-Centric Architecture & Delivery',
-    description:
-      'Lead projects where AI is a core system component — ensuring it\'s designed, integrated, and deployed correctly in production.',
+    description: "Lead projects where AI is a core system component — ensuring it's designed, integrated, and deployed correctly in production.",
   },
 ]
 
 export default function Features() {
   return (
-    <section id="services" className="py-24 md:py-32 relative">
-      {/* Subtle top border */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#27272a] to-transparent" />
-
+    <section id="services" className="py-24 md:py-32 border-t border-[#e4e4e7]">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#27272a] bg-[#111113] mb-6">
-            <span className="text-xs font-medium text-[#71717a] tracking-wide uppercase">
-              What We Build
-            </span>
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#e4e4e7] bg-[#f4f4f5] mb-6">
+            <span className="text-xs font-medium text-[#3f3f46] tracking-wide uppercase">What We Build</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#fafafa] mb-4 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#09090b] mb-4 leading-tight">
             Comprehensive AI Solutions for Modern Business
           </h2>
           <p className="text-[#71717a] text-lg leading-relaxed">
@@ -144,45 +123,21 @@ export default function Features() {
           </p>
         </div>
 
-        {/* Services grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, i) => (
-            <ServiceCard key={i} service={service} index={i} />
+            <div
+              key={i}
+              className="group rounded-2xl border border-[#e4e4e7] bg-white p-6 hover:border-[#09090b] transition-colors duration-200"
+            >
+              <div className="mb-4 inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#f4f4f5] border border-[#e4e4e7] text-[#09090b] group-hover:bg-[#09090b] group-hover:text-white group-hover:border-[#09090b] transition-all duration-200">
+                {service.icon}
+              </div>
+              <h3 className="text-[#09090b] font-semibold text-base mb-2 leading-snug">{service.title}</h3>
+              <p className="text-[#71717a] text-sm leading-relaxed">{service.description}</p>
+            </div>
           ))}
         </div>
       </div>
     </section>
-  )
-}
-
-function ServiceCard({ service, index }) {
-  return (
-    <div
-      className="group relative rounded-2xl border border-[#27272a] bg-[#111113] p-6 overflow-hidden transition-all duration-300 hover:border-[#a855f7]/40 hover:bg-[#141417]"
-      style={{
-        animationDelay: `${index * 50}ms`,
-      }}
-    >
-      {/* Hover glow */}
-      <div
-        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"
-        style={{
-          background: 'radial-gradient(ellipse at 20% 20%, rgba(168,85,247,0.07) 0%, transparent 60%)',
-        }}
-      />
-
-      {/* Icon */}
-      <div className="relative mb-4 inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[#18181b] border border-[#27272a] text-[#a855f7] group-hover:border-[#a855f7]/40 transition-colors duration-300">
-        {service.icon}
-      </div>
-
-      {/* Content */}
-      <h3 className="relative text-[#fafafa] font-semibold text-base mb-2 leading-snug">
-        {service.title}
-      </h3>
-      <p className="relative text-[#71717a] text-sm leading-relaxed">
-        {service.description}
-      </p>
-    </div>
   )
 }
