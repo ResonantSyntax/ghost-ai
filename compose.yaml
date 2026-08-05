@@ -1,0 +1,13 @@
+services:
+  ghost-ai:
+    build: .
+    image: ghost-ai:latest
+    container_name: ghost-ai
+    restart: unless-stopped
+    # No published ports — reached over the cloudflared network at http://ghost-ai:80
+    networks:
+      - cloudflared
+
+networks:
+  cloudflared:
+    external: true
